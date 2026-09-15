@@ -1,0 +1,12 @@
+langgraph
+langchain
+langchain-community
+langchain-openai
+faiss-cpu
+pydantic>=2
+pydantic-settings>=2.0.0
+streamlit
+python-dotenv
+beautifulsoup4
+pytest
+tqdm
