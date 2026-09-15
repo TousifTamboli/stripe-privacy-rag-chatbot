@@ -26,5 +26,12 @@ class Settings(BaseSettings):
         description="Stripe policy documentation URLs to index"
     )
 
+    # Evaluation Thresholds & Output Paths
+    MIN_HIT_RATE: float = Field(default=0.8, description="Minimum acceptable Hit Rate @k")
+    MIN_FAITHFULNESS: float = Field(default=0.9, description="Minimum acceptable Faithfulness score")
+    MIN_ANSWER_RELEVANCE: float = Field(default=0.8, description="Minimum acceptable Answer Relevance score")
+    MIN_CORRECTNESS: float = Field(default=0.7, description="Minimum acceptable Correctness score")
+    EVAL_RESULTS_PATH: str = Field(default="./data/eval_results", description="Path to save evaluation reports")
+
 
 settings = Settings()

@@ -13,8 +13,9 @@ __pycache__/
 *.so
 .pytest_cache/
 
-# FAISS vector store
+# FAISS vector store & eval results
 data/faiss_index/
+data/eval_results/
 
 # Streamlit
 .streamlit/

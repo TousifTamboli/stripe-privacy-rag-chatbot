@@ -169,3 +169,49 @@ or by clicking the **🔄 Rebuild Index** button directly in the Streamlit sideb
 - **Hybrid Search**: Combine BM25 keyword search with FAISS dense vector search using LangChain's `EnsembleRetriever`.
 - **Cross-Encoder Re-Ranking**: Plug in a re-ranker (e.g. Cohere Re-rank or FlashRank) between Node 2 (`retrieve`) and Node 3 (`build_context`) to re-order candidate passages.
 - **Semantic Chunking**: Swap `RecursiveCharacterTextSplitter` with `SemanticChunker` (reference template provided in [`ingestion/splitter.py`](file:///Users/tousif/githubs/stripe-privacy-rag-chatbot/ingestion/splitter.py)).
+
+---
+
+## Comprehensive Evaluation Suite
+
+The project includes an end-to-end evaluation suite that measures both **retrieval accuracy** and **generation quality** using structured LLM-as-a-judge verdicts (backed by Pydantic models).
+
+### 1. What We Evaluate
+- **Retrieval Quality**:
+  - **Hit Rate @ k**: Percentage of queries where retrieved chunks originate from the correct gold source URL.
+  - **Recall @ k**: Proportion of expected gold chunks retrieved.
+  - **Mean Reciprocal Rank (MRR)**: Evaluates whether the most relevant chunk appears at rank 1.
+  - **Context Precision**: Fraction of retrieved chunks actually relevant to the question.
+- **Generation Quality (LLM-as-Judge)**:
+  - **Faithfulness / Groundedness** (Threshold: `>= 0.9`): Checks that every factual claim in the answer is backed by retrieved context, preventing hallucinations.
+  - **Answer Relevance** (Threshold: `>= 0.8`): Evaluates whether the generated response directly answers the user's prompt.
+  - **Correctness** (Threshold: `>= 0.7`): Compares model answers against human-written ground truth reference answers.
+  - **Citation Accuracy**: Verifies that official Stripe source URLs are explicitly cited in the answer.
+  - **Out-of-Scope Abstention**: Verifies that the model properly states lack of information rather than fabricating answers for questions outside indexed policies.
+
+### 2. Golden Q&A Dataset
+Located at [`eval/golden_dataset.json`](file:///Users/tousif/githubs/stripe-privacy-rag-chatbot/eval/golden_dataset.json), containing 24 curated test cases across:
+- **`factual`** (11 questions): Direct lookup on data retention, encryption, GDPR roles, cookie policies, etc.
+- **`procedural`** (4 questions): Step-by-step guidance on DSR requests, opt-outs, DPO inquiries.
+- **`edge_case`** (5 questions): Complex or multi-part queries (e.g. non-user tracking, data sale claims, account closures).
+- **`out_of_scope`** (4 questions): Off-topic inquiries (e.g. card fees, Atlas pricing, Python webhooks) to test hallucination refusal.
+
+### 3. Running Evaluation from CLI
+Execute the evaluation suite against the golden dataset:
+```bash
+python -m eval.run_eval
+```
+This produces:
+- A console summary table broken down by question category using `pandas`.
+- Detailed failure notes for any test case falling below quality thresholds.
+- Timestamped JSON reports persisted to `./data/eval_results/eval_{timestamp}.json`.
+
+### 4. Interactive Streamlit Evaluation Dashboard
+Launch Streamlit and navigate to the **📊 Evaluation Dashboard** tab:
+```bash
+streamlit run app.py
+```
+- Real-time KPI metric cards (Hit Rate, Faithfulness, Relevance, Correctness, Avg Latency).
+- Interactive category performance bar chart.
+- Filterable results table with expandable record drill-downs for judge reasoning.
+- Live **"Re-run Full Evaluation"** button with real-time progress indicators.

@@ -1,0 +1,194 @@
+[
+  {
+    "id": "qa_01",
+    "question": "What categories of personal data does Stripe collect from users?",
+    "gold_answer": "Stripe collects identity data (such as name, email, phone number, physical address), financial data (such as bank account details, payment card numbers), transaction data, device and online identifiers (such as IP address, browser type), and interaction data.",
+    "gold_source_url": "https://stripe.com/in/privacy",
+    "gold_chunk_ids": null,
+    "category": "factual"
+  },
+  {
+    "id": "qa_02",
+    "question": "How does Stripe use personal data for fraud prevention and risk management?",
+    "gold_answer": "Stripe analyzes transaction data, device fingerprints, and behavioral patterns across its global network using machine learning to detect suspicious transactions, prevent unauthorized access, and protect businesses and consumers from fraudulent chargebacks and identity theft.",
+    "gold_source_url": "https://stripe.com/in/privacy",
+    "gold_chunk_ids": null,
+    "category": "factual"
+  },
+  {
+    "id": "qa_03",
+    "question": "How long does Stripe retain personal data?",
+    "gold_answer": "Stripe retains personal data for as long as necessary to provide services, fulfill contractual obligations, comply with financial regulations, anti-money laundering (AML) laws, tax requirements, resolve disputes, and enforce legal agreements.",
+    "gold_source_url": "https://stripe.com/in/privacy",
+    "gold_chunk_ids": null,
+    "category": "factual"
+  },
+  {
+    "id": "qa_04",
+    "question": "Does Stripe transfer personal data internationally across borders?",
+    "gold_answer": "Yes, Stripe operates globally and transfers personal data to the United States and other countries, utilizing legal mechanisms such as Standard Contractual Clauses (SCCs) and adequacy decisions to ensure an adequate level of data protection.",
+    "gold_source_url": "https://stripe.com/in/legal/privacy-center",
+    "gold_chunk_ids": null,
+    "category": "factual"
+  },
+  {
+    "id": "qa_05",
+    "question": "What security measures does Stripe employ to protect personal information?",
+    "gold_answer": "Stripe maintains administrative, technical, and physical safeguards including encryption in transit and at rest, PCI-DSS Level 1 compliance, access controls, vulnerability assessments, and regular independent security audits.",
+    "gold_source_url": "https://stripe.com/in/legal/privacy-center",
+    "gold_chunk_ids": null,
+    "category": "factual"
+  },
+  {
+    "id": "qa_06",
+    "question": "Who are the third parties with whom Stripe shares personal data?",
+    "gold_answer": "Stripe shares personal data with financial partners, card networks, payment method providers, cloud service providers, fraud prevention vendors, corporate affiliates, and regulatory or law enforcement authorities when legally required.",
+    "gold_source_url": "https://stripe.com/in/privacy",
+    "gold_chunk_ids": null,
+    "category": "factual"
+  },
+  {
+    "id": "qa_07",
+    "question": "What role does Stripe play under the GDPR: Data Controller or Data Processor?",
+    "gold_answer": "Stripe acts as a Data Processor when processing payment transactions on behalf of its business users, and as an independent Data Controller for fraud monitoring, compliance, regulatory requirements, and direct relationships with consumers and users.",
+    "gold_source_url": "https://stripe.com/in/legal/privacy-center",
+    "gold_chunk_ids": null,
+    "category": "factual"
+  },
+  {
+    "id": "qa_08",
+    "question": "How does Stripe use cookies and similar tracking technologies?",
+    "gold_answer": "Stripe uses cookies and tracking technologies to ensure essential site functionality, remember user preferences, maintain session security, analyze site traffic, prevent fraudulent activity, and measure marketing performance.",
+    "gold_source_url": "https://stripe.com/in/privacy",
+    "gold_chunk_ids": null,
+    "category": "factual"
+  },
+  {
+    "id": "qa_09",
+    "question": "Does Stripe process children's personal data?",
+    "gold_answer": "Stripe services are not directed to children under 13 (or 16 in certain jurisdictions), and Stripe does not knowingly collect personal data from children without appropriate parental or guardian consent.",
+    "gold_source_url": "https://stripe.com/in/privacy",
+    "gold_chunk_ids": null,
+    "category": "factual"
+  },
+  {
+    "id": "qa_10",
+    "question": "What rights do individuals have regarding their personal data under Stripe's privacy policy?",
+    "gold_answer": "Individuals have the right to access, rectify, delete, restrict processing, object to processing, request data portability, and withdraw consent where applicable, subject to legal and regulatory constraints.",
+    "gold_source_url": "https://stripe.com/in/privacy",
+    "gold_chunk_ids": null,
+    "category": "factual"
+  },
+  {
+    "id": "qa_11",
+    "question": "How does Stripe notify users about updates or changes to its Privacy Policy?",
+    "gold_answer": "Stripe posts updated policies on its website with a revised effective date and may provide additional notice through email or service notifications for material changes.",
+    "gold_source_url": "https://stripe.com/in/privacy",
+    "gold_chunk_ids": null,
+    "category": "factual"
+  },
+  {
+    "id": "qa_12",
+    "question": "How can a user submit a request to delete or access their personal data held by Stripe?",
+    "gold_answer": "Users can submit a Data Subject Request (DSR) through Stripe's online privacy request portal, contact the Stripe privacy team, or email Stripe's designated privacy contact / Data Protection Officer.",
+    "gold_source_url": "https://stripe.com/in/legal/privacy-center",
+    "gold_chunk_ids": null,
+    "category": "procedural"
+  },
+  {
+    "id": "qa_13",
+    "question": "What is the procedure to opt out of Stripe's promotional and marketing communications?",
+    "gold_answer": "Users can opt out of marketing communications by clicking the unsubscribe link contained within promotional emails or by updating their communication preferences in their Stripe account dashboard.",
+    "gold_source_url": "https://stripe.com/in/privacy",
+    "gold_chunk_ids": null,
+    "category": "procedural"
+  },
+  {
+    "id": "qa_14",
+    "question": "How can a customer contact Stripe's Data Protection Officer (DPO)?",
+    "gold_answer": "Individuals can contact Stripe's Data Protection Officer by submitting an inquiry via the Stripe Privacy Center or emailing the privacy team at privacy@stripe.com (or designated DPO contact listed in the policy).",
+    "gold_source_url": "https://stripe.com/in/legal/privacy-center",
+    "gold_chunk_ids": null,
+    "category": "procedural"
+  },
+  {
+    "id": "qa_15",
+    "question": "How should a merchant handle data subject requests made by end-customers whose payments were processed by Stripe?",
+    "gold_answer": "When Stripe acts as a processor, end-customers should first contact the merchant directly; the merchant can then use Stripe Dashboard tools or API endpoints to assist with fulfillment, or direct the customer to Stripe for controller-level data.",
+    "gold_source_url": "https://stripe.com/in/legal/privacy-center",
+    "gold_chunk_ids": null,
+    "category": "procedural"
+  },
+  {
+    "id": "qa_16",
+    "question": "Does Stripe sell my personal data to advertisers and can I stop them?",
+    "gold_answer": "Stripe explicitly states that it does not sell personal data to third parties or advertisers in exchange for money. Users can also manage cookies and tracking preferences through cookie banners and browser settings.",
+    "gold_source_url": "https://stripe.com/in/privacy",
+    "gold_chunk_ids": null,
+    "category": "edge_case"
+  },
+  {
+    "id": "qa_17",
+    "question": "If I close my account with a store that uses Stripe, will Stripe automatically delete all my credit card and transaction records?",
+    "gold_answer": "No, Stripe is legally required under financial, anti-money laundering (AML), and tax regulations to retain transaction and payment records for specified statutory retention periods even after account closure.",
+    "gold_source_url": "https://stripe.com/in/privacy",
+    "gold_chunk_ids": null,
+    "category": "edge_case"
+  },
+  {
+    "id": "qa_18",
+    "question": "How do you track or store information about someone who never signed up for an account on Stripe?",
+    "gold_answer": "When a person buys from a merchant using Stripe, Stripe collects payment details, IP addresses, device identifiers, and transaction metadata as an end-customer to process the charge and mitigate fraud across merchants.",
+    "gold_source_url": "https://stripe.com/in/privacy",
+    "gold_chunk_ids": null,
+    "category": "edge_case"
+  },
+  {
+    "id": "qa_19",
+    "question": "Can Stripe disclose my financial transactions to government agencies without telling me?",
+    "gold_answer": "Stripe may disclose personal data to law enforcement or regulatory authorities if legally compelled by valid subpoenas, court orders, or statutory obligations, and may be restricted by law from notifying the user.",
+    "gold_source_url": "https://stripe.com/in/privacy",
+    "gold_chunk_ids": null,
+    "category": "edge_case"
+  },
+  {
+    "id": "qa_20",
+    "question": "Is Stripe compliant with privacy frameworks like the EU-US Data Privacy Framework?",
+    "gold_answer": "Stripe participates in and complies with relevant international transfer frameworks and standards, including Standard Contractual Clauses and certified transfer mechanisms documented in its Privacy Center.",
+    "gold_source_url": "https://stripe.com/in/legal/privacy-center",
+    "gold_chunk_ids": null,
+    "category": "edge_case"
+  },
+  {
+    "id": "qa_21",
+    "question": "What is the standard processing fee percentage for domestic credit cards on Stripe?",
+    "gold_answer": "I don't have that information in the indexed Stripe policy documentation.",
+    "gold_source_url": "https://stripe.com/in/privacy",
+    "gold_chunk_ids": null,
+    "category": "out_of_scope"
+  },
+  {
+    "id": "qa_22",
+    "question": "How do I create an idempotency key in Stripe using Python code?",
+    "gold_answer": "I don't have that information in the indexed Stripe policy documentation.",
+    "gold_source_url": "https://stripe.com/in/privacy",
+    "gold_chunk_ids": null,
+    "category": "out_of_scope"
+  },
+  {
+    "id": "qa_23",
+    "question": "What is the pricing for incorporating a Delaware company with Stripe Atlas?",
+    "gold_answer": "I don't have that information in the indexed Stripe policy documentation.",
+    "gold_source_url": "https://stripe.com/in/legal/privacy-center",
+    "gold_chunk_ids": null,
+    "category": "out_of_scope"
+  },
+  {
+    "id": "qa_24",
+    "question": "Can you show me how to write a Stripe webhook handler using FastAPI?",
+    "gold_answer": "I don't have that information in the indexed Stripe policy documentation.",
+    "gold_source_url": "https://stripe.com/in/privacy",
+    "gold_chunk_ids": null,
+    "category": "out_of_scope"
+  }
+]
